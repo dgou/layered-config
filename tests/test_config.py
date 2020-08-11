@@ -93,6 +93,13 @@ key1=key1 from layer with env override section
 # Valid means that these config cakes are expected to load correctly:
 VALID_CAKE_NAMES = ["L1", "L2", "L1L2"]
 
+# All the config cakes defined, correctly or not.
+ALL_CAKE_NAMES = VALID_CAKE_NAMES + [
+    "Nonexistant File",
+    "Expanduser Nonexistant File",
+    "L3",
+]
+
 
 @pytest.fixture(scope="session")
 def sample_configs(tmp_path_factory):
